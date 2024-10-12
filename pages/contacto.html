@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Contacto</title>
+</head>
+
+<header>
+    <nav>
+        <a href="../index.html"><img src="https://cdn-icons-png.flaticon.com/512/3401/3401123.png" alt="Logo" width="15%"></a>
+        <ul>
+            <li><a href="../index.html"><h3>Home</h3></a></li>
+            <li><a href="./nosotros.html"><h3>Nosotros</h3></a></li>
+            <li><h3>Contacto</h3></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <br><br><br><br>
+
+    <main>
+        <section>
+            <form action="https://formspree.io/f/xyzygjgn" method="post" autocomplete="off">
+                <label for="nombre">Ingresa tu nombre</label>
+                <input type="text" name="nombre" id="nombre" required>
+
+                <label for="dni">Ingresa tu DNI</label>
+                <input type="number" name="" id="dni" required>
+
+                <label for="seleccion">Elige una opción:</label>
+                <select name="seleccion" id="seleccion" required onchange="">
+                    <!-- <option value=""></option> -->
+                    <option disabled selected>-Opciones-</option>
+                    <option value="boca">Boca</option>
+                    <option value="river">River</option>
+                    <option value="velez">Velez</option>
+                    <option value="san lorenzo">San Lorenzo</option>
+                </select>
+
+                <label for="email">Ingresa tu email</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="mensaje"> Dejanos tu mensaje</label>
+                <textarea name="mensaje" id="mensaje" cols="40" rows="10" required></textarea>
+
+                <button type="submit">Enviar formulario</button>
+                <input type="reset" value="Borrar formulario">
+
+                
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>
+
