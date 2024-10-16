@@ -2,3 +2,36 @@
     background-color: rgb(228, 197, 197);
 }
 
+header{
+    background-color: brown;
+}
+
+.linksnavbar{
+    list-style: none;
+    text-decoration: none;
+}
+
+#none{
+    text-decoration: none;
+}
+
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+}
+
+footer{
+    background-color: brown;
+}
+
+footer .ubicacion{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+}
+
+footer .misitio{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+
