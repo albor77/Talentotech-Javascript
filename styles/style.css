@@ -3,92 +3,600 @@
     margin: 0;    
     padding: 0;
 
+    font-size: 18px;  /* lo pongo para despues poder poner tamaños rem */
 }
+
 
 body{
     background-color: rgb(228, 197, 197);
+
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima del 100% de la ventana */
 }
 
-.header{
+
+main {
+    flex: 1; /* Ocupa el espacio restante, esto tuve que buscarlo*/
+    padding: 2rem;
+
+    background-color: #4f6c55;
+}
+
+
+.logo-nombre{
+    font-family: 'Armageda Wide', sans-serif;
+    color: #C8A664;
+    font-size: 55px;
+    margin-left: 20px;
+}
+
+header{
     display: flex;
-    height: 100px;
-    background-color: brown;
+    width: 100%;
+    background-color: #5F8266;    
     justify-content: space-between;
     align-items: center;
-    padding: 5px 5%;
+    padding: 20px;
 }
 
-.header .logo img{
+
+.logo-nombre{
     height: 70px;
     width: auto;
     transition: all 0.3s;
+    justify-content: center;
 }
 
-.header .logo img:hover{
-    transform: scale(120%)
+.logo-nombre:hover{
+    transform: scale(120%);
+    color: #f2a60f;
+    margin-left: 30px;
 }
 
-.header .nav-links{
+.navbar ul{
+    display: flex;
     list-style: none;
+    gap: 5px;
 }
 
-.header .nav-links li{
-    display: inline-block;
+
+li{
+    /* display: inline-block; */
     padding: 0 20px;
 }
 
-.header .nav-links li:hover{
-    transform: scale(110%);
+.fa-cart-shopping{
+    color: #C8A664;
+    font-size: 25px;
+    transition: transform 0.3s ease; /* Transición suave */
 }
 
-.header .nav-links a{
+.fa-cart-shopping:hover{
+    color: #f2a60f;
+    transform: scale(1.2); /* Aumenta el tamaño al 150% */
+}
+
+
+li:hover{
+    transform: scale(130%);
+}
+
+
+a{
     font-size: 700;
-    color: black;
+    color: #C8A664;
     text-decoration: none;
 }
 
-.header .nav-links a:hover{
-    color: white;
+a:hover{
+    color: #f2a60f;
 }
 
-.header .nav-links h3{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 22px;
-}
 
 
 h2{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 40px;
-    display: flex; 
-    justify-content: left;
-    align-items: left;
 }
 
-.nombre-pagina{
+h3{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+}
+
+
+
+
+
+.hero{
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: #4f6c55; 
+    flex: 1;
     display: flex;
-    justify-content: left;
+}
+
+
+
+.container-hero{
+    width: 90%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* margin-bottom: rem; */
+    padding: 1rem;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.info-hero h2{
+    font-size: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-family: "Forum", serif;
+}
+
+.info-hero p{
+    font-size: 2rem;
+    font-family: "Forum", serif;
+    max-width: 60%;
+    margin-bottom: 4rem;
 }
 
 
 
 
 
+
+
+/* --------------------footer-----------------------*/
 
 
 footer{
-    background-color: brown;
+    background-color: black;
+    /* background-color: #314334; */
+    padding: 20px;
+    color: white;
+    text-align: center;
 }
 
-footer .ubicacion{
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+footer ul li {
+    display: inline-block;
+}
+
+footer ul li img {
+    width: 50px; 
+    height: 50px; 
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin deformarla */
+    transition: transform 0.3s ease; /* Agrega un efecto de transición para el hover */
+}
+
+
+footer ul li img:hover {
+    transform: scale(1.2); 
+}
+
+
+footer .ubicacion {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 50px;
 }
 
-footer .misitio{
+footer .misitio {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
+    padding: 30px 0 2px 0;
+    color: #C8A664;
 }
 
 
 
+
+
+/* -------------------------productos------------------------------ */
+
+
+
+/* Estilos de la sección de productos */
+
+.product-section {
+    text-align: center;
+}
+
+.product-section h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    /* font-family: 'Armageda Wide', sans-serif; */
+    font-family: "Forum", serif;
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
+
+}
+
+
+.product-section p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    font-family: "Forum", serif;
+}
+
+  /* Estilos de la cuadrícula de productos */
+
+.product-flex {     /* le habia puesto product-grid  pero lo cambie por que no me gusto como quedaba con grid */
+    /* display: grid;
+    gap: 1.5rem; */
+
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));  */ /* Las columnas se ajustan de acuerdo al espacio  */
+    /* grid-template-columns: repeat(auto-fit, 250px); */ /* Ancho fijo de 250px para cada card por que antes se me achicaban si achicaba la pantalla */
+    /* justify-content: center;  *//* Centra las columnas si queda espacio extra */
+    /* padding: 1rem; */
+
+
+
+    /* al final lo uso con flexbox queda mejor. Con grid me complique y no me salio */
+
+    display: flex; /* utilizamos flexbox para organizar los productos */
+    flex-wrap:wrap;/*  permite que los productos se organicen en varias filas */
+    justify-content: space-evenly; /* espacio uniforme entre productos */
+    padding: 20px;
+}
+
+
+
+
+
+
+/* Estilos de las tarjetas de productos */
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+
+    background-color: #5F8266;
+    border: 3px solid #C8A664;
+    border-radius: 20px;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 3rem;
+
+
+    width: 300px; /* Fija el ancho de cada card */
+    height: auto/* Fija la altura si lo deseas, para evitar cambios en el diseño. Lo dejo en auto por que me falta la descripcion del producto todavia. */
+}
+
+.product-card img {
+    max-width: 250px;
+    height: 300px; /*  aca podria poner auto tambien para que no me deforme la imagen. tendria que probar que queda mejor al terminar de cargar todas las imagenes */
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.product-card h4 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/*  boton de compra  */
+.product-card button {
+    background-color: #C8A664;
+    color: #333;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.product-card button:hover{
+    background-color: #f2a60f;
+}
+
+
+
+
+
+
+/* ------------------------Nosotros---------------------------- */
+
+
+
+
+.nosotros{
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: #4f6c55; 
+    flex: 1;
+    display: flex;
+}
+
+
+
+.container-nosotros{
+    width: 90%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* margin-bottom: rem; */
+    padding: 1rem;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.info-nosotros h2{
+    font-size: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-family: "Forum", serif;
+}
+
+.info-nosotros p{
+    font-size: 2rem;
+    font-family: "Forum", serif;
+    max-width: 100%;
+    margin-bottom: 4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------Contacto------------------------------- */
+
+
+
+.container-contacto {
+    padding: 2rem;
+    background-color: #f5f5f570;
+    max-width: 1300px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    gap: 1rem; /* Espacio entre filas */
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas iguales */
+    /* grid-template-columns: 1fr 2fr; */ /* Dos columnas: 1/3 para etiquetas y 2/3 para campos */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr;  *//* Cinco columnas iguales */
+    justify-items: center;
+    align-items: center;
+}
+
+label {
+    font-size: 1.3rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #415946;
+    grid-column: 1 / 4; /* Centra las etiquetas en las tres columnas */
+    /* grid-column: 2; */ /* Centra las etiquetas en las columnas 2 a 4 */
+    /* justify-self: start; */ /* Alinea las etiquetas a la izquierda */
+    text-align: left;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    grid-column: 1 / 4; /* Ocupa las tres columnas */
+
+    /* resize: vertical; */
+    /* grid-column: 3; */ /* Centra los campos de entrada en las columnas 3 a 5 */
+}
+
+textarea {
+    min-height: 100px;
+}
+
+button,
+input[type="reset"] {
+    grid-column: 1 / 4; /* Ocupa las tres columnas */
+    /* grid-column: span 2; */ /* Para que ocupen las dos columnas */
+    /* grid-column: 2 / 5; */ /* Centra el botón en las columnas 2 a 4 */
+    padding: 0.75rem;
+    font-size: 1.5rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    background-color: #4f6c55;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button:hover{
+    background-color: #C8A664;
+}
+
+
+input[type="reset"]:hover {
+    background-color: #5c100f;
+}
+
+
+input[type="reset"] {
+    background-color: #666;
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------medias queries-------------------------- */
+
+
+
+/* Estilos para compu */
+
+@media (min-width: 1024px) {
+    .logo-nombre {
+        font-size: 70px;
+        text-align: left;
+    }
+
+    .navbar ul {
+        gap: 20px;
+    }
+
+
+    .container-hero{
+        margin-left: 50px;
+    }
+    .info-hero p{
+        text-align: left;
+        font-size: 1.8rem;
+    }
+
+
+/* -----------productos--------- */
+
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+}
+
+
+
+
+
+/* Estilos para tablet */
+
+@media (min-width: 481px) and (max-width: 1023px) {
+    header {
+        display: flex;
+        flex-direction: column; /* con esto apilo logo y navbar en tablet */
+        padding: 15px;
+        align-items: center;
+    }
+
+    .logo-nombre {
+        font-size: 70px;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: row; /* Mantiene navbar en fila en tablet */
+        gap: 5px;
+        justify-content: center;
+        /* background-color: rgb(68, 255, 0); */
+    }
+
+    li{
+        padding: 8px;
+    }
+
+    .info-hero h2{
+        text-align: left;
+        font-size: 3.5rem;
+    }
+
+    .info-hero p{
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+
+
+    /* --------productos--------- */     /*  esto no me salio muy bien lo oculto por las dudas, lo termine haciendo con Flexbox. */
+    /* .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    } */
+
+
+}
+
+/* Estilos para celu */
+
+@media (max-width: 480px) {
+    header {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-nombre {
+        text-align: center;
+        font-size: 70px;
+        margin-bottom: 10px;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        /* background-color: blue; */
+    }
+
+    .info-hero h2{
+        text-align: left;
+        font-size: 2.5rem;
+    }
+
+    .info-hero p{
+        text-align: left;
+        font-size: 1.2rem;
+    }
+
+
+    /* ----------productos---------- */
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

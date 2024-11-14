@@ -1,11 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
+    <link rel="shortcut icon" href=".//assets/images/huella-16.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">  <!-- CDN Fontawesome -->
+
+    <link href="https://fonts.cdnfonts.com/css/armageda-wide" rel="stylesheet"> <!-- CDN FONTS -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@200&family=Montserrat:wght@300&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Tp Talentotech</title>
 </head>
+
 <body>
-    Productos
+    <header>
+        <!-- <div class="logo">
+            <a href="./index.html"><img src=".//assets/images/huella-64.png" alt="Logo"></a>
+        </div> -->    <!--  este seria el logo pero no llegue a poder acomodarlo bien asi que lo dejo para la proxima -->
+
+        <a href="../index.html"><h1 class="logo-nombre">DOGEVER</h1></a>
+
+        <nav class="navbar"> <!--  este es el navbar  -->
+            <ul>
+                <li><a href="../index.html"><h3>Home</h3></a></li>
+                <li><a href="../pages/productos.html"><h3>Productos</h3></a></li>
+                <li><a href="../pages/nosotros.html"><h3>Nosotros</h3></a></li>
+                <li><a href="../pages/contacto.html"><h3>Contacto</h3></a></li>
+                <li><a href="#carrito"></a><i class="fa-solid fa-cart-shopping"></i></li>  <!-- carrito fontawesome -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- aca van a ir todo lo de las cards -->
+        <section class="product-section">
+            <h2>Acá encontrarás todo eso que tu perro quisiera tener.</h2>
+            <!-- <h2>Descubri todo eso que tu perro quisiera tener...</h2> -->
+            <!-- <p>Acá encontrarás todo eso que tu perro quisiera comprar.</p> -->
+            
+            <div class="product-flex">    <!-- le habia puesto product-grid  pero lo cambie por que no me gusto como quedaba con grid  -->
+                <div class="product-card">
+                    <img src="https://www.simones.com.ar/pub/media/catalog/product/cache/479708ed9704cd69af870767c389d394/c/o/collar_20_cm_afro_simones_friends_3_1_1.jpg" alt="Producto 1">
+                    <h3>Producto 1</h3>
+                    <h4>$50</h4>
+                    <p>Descripción del producto 1.</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://acdn.mitiendanube.com/stores/880/994/products/d_nq_np_919837-mla45807014067_052021-o-61-a414a64825c767ab6716246471648763-1024-1024.png" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <h4>$50</h4>
+                    <p>Descripción del producto 2.</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://media.istockphoto.com/id/183770030/es/foto/collar%C3%ADn-de-perro.jpg?s=612x612&w=0&k=20&c=sEvDY9aewUd64KJQNNKnxe6JC8XueUOeJRb2SPWfwWQ=" alt="Producto 3">
+                    <h3>Producto 3</h3>
+                    <h4>$50</h4>
+                    <p>Descripción del producto 3.</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://www.winpet.cl/wp-content/uploads/2021/01/collar-perro-tachas.jpg" alt="Producto 4">
+                    <h3>Producto 4</h3>
+                    <h4>$50</h4>
+                    <p>Descripción del producto 4.</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://acdn.mitiendanube.com/stores/476/673/products/bandana-perro-barloposta1-15180499458900728916223200482325-1024-1024.png" alt="Producto 5">
+                    <h3>Producto 5</h3>
+                    <h4>$50</h4>
+                    <p>Descripción del producto 5.</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://dummyimage.com/300x300/000/fff" alt="Producto 6">
+                    <h3>Producto 6</h3>
+                    <h4>$50</h4>
+                    <p>Descripción del producto 6.</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://dummyimage.com/300x300/000/fff" alt="Producto 7">
+                    <h3>Producto 7</h3>
+                    <h4>$50</h4>
+                    <p>Descripción del producto 7.</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://dummyimage.com/300x300/000/fff" alt="Producto 8">
+                    <h3>Producto 8</h3>
+                    <h4>$50</h4>
+                    <p>Descripción del producto 8.</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://dummyimage.com/300x300/000/fff" alt="Producto 9">
+                    <h3>Producto 9</h3>
+                    <h4>$50</h4>
+                    <p>Descripción del producto 9.</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://dummyimage.com/300x300/000/fff" alt="Producto 10">
+                    <h3>Producto 10</h3>
+                    <h4>$50</h4>
+                    <p>Descripción del producto 10.</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://dummyimage.com/300x300/000/fff" alt="Producto 11">
+                    <h3>Producto 11</h3>
+                    <h4>$50</h4>
+                    <p>Descripción del producto 11.</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://dummyimage.com/300x300/000/fff" alt="Producto 12">
+                    <h3>Producto 12</h3>
+                    <h4>$50</h4>
+                    <p>Descripción del producto 12.</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+        <ul>
+            <li><a href="http://x.com/" target="_blank" rel="noopener noreferrer"><img class="icono-x" src="../assets/images/x-logo2.png" alt="logo twitter"></a></li>
+            <li><a href="http://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/62-instagram-512.png" alt="logo instagram"></a></li>
+            <li><a href="http://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="../assets/images/logo-youtube.png" alt="logo youtube"></a></li>
+            <li><a href="https://www.google.com/maps/place/Palermo,+Cdad.+Aut%C3%B3noma+de+Buenos+Aires/" target="_blank" rel="noopener noreferrer"><img src="../assets/images/ubicacion-64.png" alt="logo ubicacion"></a></li>
+        </ul>
+
+        <p class="misitio">© 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+
+    </footer>
+
+
 </body>
-</html>

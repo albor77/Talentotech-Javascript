@@ -3,60 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href=".//assets/images/huella-16.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">  <!-- CDN Fontawesome -->
+
+    <link href="https://fonts.cdnfonts.com/css/armageda-wide" rel="stylesheet"> <!-- CDN FONTS -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@200&family=Montserrat:wght@300&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Repaso02</title>
+    <title>Tp Talentotech</title>
 </head>
 
 
 <body>
-    <header class="header">
-        <div class="logo">
-            <a href="./index.html"><img src="https://cdn-icons-png.flaticon.com/512/3401/3401123.png" alt="Logo"></a>
-        </div>
+    <header>
+        <!-- <div class="logo">
+            <a href="./index.html"><img src=".//assets/images/huella-64.png" alt="Logo"></a>
+        </div> -->    <!--  este seria el logo pero no llegue a poder acomodarlo bien asi que lo dejo para la proxima -->
 
-        <h2 class="nombre-pagina">Mi Sitio Web</h2>
+        <a href="./index.html"><h1 class="logo-nombre">DOGEVER</h1></a>
 
-        <nav> <!--  este es el navbar  -->
-            <ul class="nav-links">
+        <nav class="navbar"> <!--  este es el navbar  -->
+            <ul>
                 <li><a href="./index.html"><h3>Home</h3></a></li>
                 <li><a href="./pages/productos.html"><h3>Productos</h3></a></li>
                 <li><a href="./pages/nosotros.html"><h3>Nosotros</h3></a></li>
                 <li><a href="./pages/contacto.html"><h3>Contacto</h3></a></li>
+                <li><a href="#carrito"></a><i class="fa-solid fa-cart-shopping"></i></li>  <!-- carrito fontawesome -->
             </ul>
         </nav>
     </header>
 
+
     <main>
-        <section>
-            <article>
-                <span>Esta es una <strong>Tabla</strong> de prueba:</span>
-                <br><br>
-                <table border="2">
-                    <tr>
-                        <th>Nombre</th>
-                        <th>DNI</th>
-                        <th>Email</th>
-                    </tr>
 
-                    <tr>
-                        <td align="center">Carlos</td>
-                        <td align="center">30.566.214</td>
-                        <td align="center">carlos@gmail.com</td>
-                    </tr>
-
-                    <tr>
-                        <td align="center">Juan</td>
-                        <td align="center">25.897.654</td>
-                        <td align="center">juan@gmail.com</td>
-                    </tr>
-                </table>
-            </article>
+        <section class="hero">
+            <div class="container-hero">
+                <div class="info-hero">
+                    <h2>El lugar donde tu perro compraria.</h2>
+                    <p>DOGEVER es un ecommerce especializado en productos para perros. <br> <br>Nuestro objetivo es brindarte calidad, variedad y confianza en cada producto, para que puedas cuidar y consentir a tu mascota de la mejor manera posible.</p>
+                </div>
+                <!-- <div class="img-hero"></div> --> <!-- aca la idea seria poner una imagen -->
+            </div>
         </section>
 
-        <br><br><br>
+        
 
-        <section>
+        <!-- <section>
             <article>
                 <span>Si tenés ganas, mientras navegas podés escuchar buena música:</span>
                 <br><br>
@@ -68,22 +61,27 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/pK7egZaT3hs?si=CGTZf6pzbwUWU_h1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 
             </article>
-        </section>
+        </section> -->
+
     </main>
 
-    <br><br><br>
+
 
     <footer>
         <ul>
-            <li><a href="http://x.com/" target="_blank" rel="noopener noreferrer"><img src="./assets/images/twitter-logo.png" alt="logo twitter" width="15%"></a></li>
-            <li><a href="http://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/62-instagram-512.png" alt="logo instagram" width="15%"></a></li>
-            <li><a href="http://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="./assets/images/logo-youtube.png" alt="logo youtube" width="15%"></a></li>
+            <li><a href="http://x.com/" target="_blank" rel="noopener noreferrer"><img class="icono-x" src="./assets/images/x-logo2.png" alt="logo twitter"></a></li>
+            <li><a href="http://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/62-instagram-512.png" alt="logo instagram"></a></li>
+            <li><a href="http://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="./assets/images/logo-youtube.png" alt="logo youtube"></a></li>
+            <li><a href="https://www.google.com/maps/place/Palermo,+Cdad.+Aut%C3%B3noma+de+Buenos+Aires/" target="_blank" rel="noopener noreferrer"><img src="./assets/images/ubicacion-64.png" alt="logo ubicacion"></a></li>
         </ul>
 
-        <br><br><br>
+
+        <!-- <br><br><br>
+
+        aca tengo un iframe con la ubicacion, pero no le encontre la vuelta para dejarlo bien presentado en el formato que le di a la pagina. asi que lo pongo al final en el footer como un link a google maps.
 
         <p class="ubicacion">Nuestra ubicación:</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6569.856571685106!2d-58.423578554582846!3d-34.58068109884499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb59c771eb933%3A0x6b3113b596d78c69!2sPalermo%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1728086902949!5m2!1ses-419!2sar" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6569.856571685106!2d-58.423578554582846!3d-34.58068109884499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb59c771eb933%3A0x6b3113b596d78c69!2sPalermo%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1728086902949!5m2!1ses-419!2sar" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe> -->
 
         <p class="misitio">© 2024 Mi Sitio Web. Todos los derechos reservados.</p>
 
