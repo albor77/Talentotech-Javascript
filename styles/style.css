@@ -8,7 +8,7 @@
 
 
 body{
-    background-color: rgb(228, 197, 197);
+    background-color: rgb(228, 197, 197);  /* con esto me ayude a saber si taba bien linkeado el css  */
 
 
     display: flex;
@@ -156,55 +156,6 @@ h3{
 
 
 
-/* --------------------footer-----------------------*/
-
-
-footer{
-    background-color: black;
-    /* background-color: #314334; */
-    padding: 20px;
-    color: white;
-    text-align: center;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-}
-
-footer ul li {
-    display: inline-block;
-}
-
-footer ul li img {
-    width: 50px; 
-    height: 50px; 
-    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin deformarla */
-    transition: transform 0.3s ease; /* Agrega un efecto de transición para el hover */
-}
-
-
-footer ul li img:hover {
-    transform: scale(1.2); 
-}
-
-
-footer .ubicacion {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 50px;
-}
-
-footer .misitio {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-    padding: 30px 0 2px 0;
-    color: #C8A664;
-}
-
-
 
 
 
@@ -260,9 +211,6 @@ footer .misitio {
 
 
 
-
-
-
 /* Estilos de las tarjetas de productos */
 
 .product-card {
@@ -303,7 +251,10 @@ footer .misitio {
 
 .product-card p {
     font-size: 0.9rem;
-    color: #333;
+    color: #2a2929;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
 }
 
 /*  boton de compra  */
@@ -313,10 +264,13 @@ footer .misitio {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 10px;
+
+    /* transition: transform 0.3s ease; */ /* Transición suave */
 }
 
 .product-card button:hover{
     background-color: #f2a60f;
+    /* transform: scale(1.1); */ /* Aumenta el tamaño al 100% */
 }
 
 
@@ -328,7 +282,6 @@ footer .misitio {
 
 
 
-
 .nosotros{
     width: 100%;
     height: 100%;
@@ -337,7 +290,6 @@ footer .misitio {
     flex: 1;
     display: flex;
 }
-
 
 
 .container-nosotros{
@@ -368,10 +320,6 @@ footer .misitio {
     max-width: 100%;
     margin-bottom: 4rem;
 }
-
-
-
-
 
 
 
@@ -468,6 +416,56 @@ input[type="reset"] {
 
 
 
+
+
+
+/* --------------------footer-----------------------*/
+
+
+footer{
+    background-color: black;
+    /* background-color: #314334; */
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+footer ul li {
+    display: inline-block;
+}
+
+footer ul li img {
+    width: 50px; 
+    height: 50px; 
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin deformarla */
+    transition: transform 0.3s ease; /* Agrega un efecto de transición para el hover */
+}
+
+
+footer ul li img:hover {
+    transform: scale(1.2); 
+}
+
+
+footer .ubicacion {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+}
+
+footer .misitio {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    padding: 30px 0 2px 0;
+    color: #C8A664;
+}
 
 
 
@@ -595,8 +593,8 @@ input[type="reset"] {
 
     /* ----------productos---------- */
 
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
+    /* .product-grid {
+        grid-template-columns: 1fr;     /*  esto no me salio muy bien lo oculto por las dudas, lo termine haciendo con Flexbox. */
+    } */
 
 }
