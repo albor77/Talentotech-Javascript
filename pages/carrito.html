@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +14,6 @@
     <link rel="stylesheet" href="../styles/style.css">
     <title>Tp Talentotech</title>
 </head>
-
-
 
 <body>
 
@@ -36,41 +35,28 @@
         </nav>
     </header>
 
-
     <main>
-        <section class="container-contacto">
-            <form action="https://formspree.io/f/xyzygjgn" method="post" autocomplete="off">
-                <label for="nombre">Ingresa tu nombre:</label>
-                <input type="text" name="nombre" id="nombre" required>
+    
+    <!--  Encabezado del carrito -->
+    <!-- <header>
+        <h1>Carrito de Compras</h1>
+        <a href="./index.html" class="icono-carrito">⬅️ Volver</a> boton de regresar
+    </header> -->
 
-                <label for="dni">Ingresa tu DNI:</label>
-                <input type="number" name="" id="dni" required>
+    <!-- seccion principal del carrito -->
+        <section id="carrito" class="productos">
 
-                <label for="email">Ingresa tu email:</label>
-                <input type="email" name="email" id="email" required>
+            <h2 id="tituloCarrito">Tu carrito de compras:</h2>
+            <div id="lista-carrito">
+            <!--    lista de productos -->
+            </div>
 
-                <label for="seleccion">Elige una opción:</label>
-                <select name="seleccion" id="seleccion" required onchange="">
-                    <!-- <option value=""></option> -->
-                    <option disabled selected>-Opciones-</option>
-                    <option value="consulta">Consulta</option>
-                    <option value="reclamo">Reclamo</option>
-                    <option value="sugerencia">Sugerencia</option>
-                    <option value="otros">Otros</option>
-                </select>
+            <button id="finalizarCompra" onclick="realizarCompra()">Finalizar la compra</button><!--  boton de compra -->
 
-                <label for="mensaje"> Dejanos tu mensaje:</label>
-                <textarea name="mensaje" id="mensaje" cols="40" rows="10" required></textarea>
-
-                <button type="submit">Enviar formulario</button>
-                <input type="reset" value="Borrar formulario">
-            </form>
         </section>
     </main>
-    
 
 
-    
     <footer>
         <ul>
             <li><a href="http://x.com/" target="_blank" rel="noopener noreferrer"><img class="icono-x" src="../assets/images/x-logo2.png" alt="logo twitter"></a></li>
@@ -83,9 +69,7 @@
 
     </footer>
 
-
     <script src="../scripts/carrito.js"></script>
 </body>
 
 </html>
-
