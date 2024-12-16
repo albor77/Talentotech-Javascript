@@ -16,7 +16,7 @@ const agregarAlcarrito = (nombre,precio) =>{
     localStorage.setItem("carrito", JSON.stringify(carrito)); 
 
     // muestra un alerta de confirmacion
-    alert(`Agregaste : ${nombre} al carrito`)
+    alert(`Agregaste : ${nombre} al carrito.`)
 }
 
 

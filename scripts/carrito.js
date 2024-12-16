@@ -82,7 +82,7 @@ const eliminarDelCarrito=(indice)=>{
 // Simule la compra
 
 const realizarCompra =()=>{
-    alert("compra realizada con exito")
+    alert("Compra realizada con éxito.")
     localStorage.removeItem("carrito")
     window.location.href="../index.html"
 }
