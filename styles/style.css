@@ -517,8 +517,8 @@ input[type="reset"] {
 
 /* Estilos para el botón de finalizar compra */
 #carrito button {
-    background-color: #C8A664;
-    color: #333;
+    background-color: #666;
+    color: #ffffff;
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 10px;
@@ -528,12 +528,24 @@ input[type="reset"] {
 }
 
 #carrito button:hover {
+    background-color: #5c100f;
+    color: #ffffff;
+}
+
+#carrito button#finalizarCompra {
+    background-color: #C8A664;
+    color: #333;
+}
+
+#carrito button#finalizarCompra:hover {
     background-color: #f2a60f;
+    color: #333;
 }
 
 
+
 /* Estilo cuando el botón está desactivado */
-#carrito button:disabled {
+#carrito button#finalizarCompra:disabled {
     background-color: #ccc; /* Color de fondo cuando está desactivado */
     color: #666; /* Color de texto cuando está desactivado  */
     cursor: not-allowed; /* Cambia el cursor a "no permitido" */
@@ -543,7 +555,7 @@ input[type="reset"] {
 p.precio {
     font-size: 1.8rem;
     font-weight: bold; 
-    color: #674040; 
+    color: #721414; 
 }
 
 
