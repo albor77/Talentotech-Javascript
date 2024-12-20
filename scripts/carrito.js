@@ -11,12 +11,18 @@ const guardarCarrito = () => {
 }
 
 
+// Función para calcular el total del carrito
+const calcularTotal = () => {
+    return carrito.reduce((total, item) => total + Number(item.precio || 0), 0);
+};
+
 
 
 // Muestra los productos en el carrito
 
 const mostrarCarrito = ()=> {
     const lista = document.getElementById("lista-carrito")
+    const totalElemento = document.getElementById("total-carrito"); // Elemento donde se mostrará el total
     lista.innerHTML = "";  // Limpiar la lista antes de mostrarla
 
     if(carrito.length===0){
@@ -35,6 +41,12 @@ const mostrarCarrito = ()=> {
     }
         // Actualizar el contador de productos
         actualizarContador();
+
+
+        // Actualizar el total
+    if (totalElemento) {
+        totalElemento.textContent = `Total: $${calcularTotal()}`;
+    }
 }
 
 // Actualiza el contador de productos en el carrito
@@ -79,7 +91,9 @@ const eliminarDelCarrito=(indice)=>{
     actualizarBotonCompra();
 }
 
-// Simule la compra
+
+
+// Simula la compra
 
 const realizarCompra =()=>{
     alert("Compra realizada con éxito.")
